@@ -1,0 +1,26 @@
+- hosts: host01
+  tasks:
+  - name: "Replace Port01"
+    replace: 
+      path: /var/www/default/index.html
+      regexp: '1'
+      replace: '1'
+      backup: yes
+      
+- hosts: host02
+  tasks:
+  - name: "Replace Port02"
+    replace: 
+      path: /var/www/default/index.html
+      regexp: '1'
+      replace: '2'
+      backup: yes
+      
+- hosts: host03
+  tasks:
+  - name: "Replace Port03"
+    replace: 
+      path: /var/www/default/index.html
+      regexp: '1'
+      replace: '3'
+      backup: yes
